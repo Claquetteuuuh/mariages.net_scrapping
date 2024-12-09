@@ -152,6 +152,7 @@ async function formatedJSONToCSV(infos: CompleteDomainInfo[], outFile: string, m
 const url = process.argv[2];
 const mode = process.argv[3] as "w" | "a";
 const outputFile = process.argv[4];
+const maxPage = process.argv[5];
 
 if (!url || !mode || !outputFile) {
     console.error('Usage: npm run start <url> <mode> <outputFile>');
@@ -166,8 +167,34 @@ if (mode !== 'w' && mode !== 'a') {
 
 const main = async () => {
     try {
-        const formatedData = await getCompleteDataFormatedOfPage(url);
-        await formatedJSONToCSV(formatedData, outputFile, mode);
+        if (!maxPage) {
+            const formatedData = await getCompleteDataFormatedOfPage(url);
+            await formatedJSONToCSV(formatedData, outputFile, mode);
+            return
+        }
+        const maxPageInt = Number.parseInt(maxPage)
+        if (maxPage) {
+            const param = "&NumPage="
+            if (!url.includes(param)) {
+                const promises = Array.from({ length: maxPageInt }, (_, i) =>
+                    getCompleteDataFormatedOfPage(`${url}${param}${i + 1}`)
+                );
+
+                const allData = await Promise.all(promises);
+
+                const flattenedData = allData.flat();
+                await formatedJSONToCSV(flattenedData, outputFile, mode);
+            } else {
+                const promises = Array.from({ length: maxPageInt }, (_, i) => {
+                    const newUrl = url.replace(/NumPage=\d+/, `NumPage=${i + 1}`);
+                    return getCompleteDataFormatedOfPage(newUrl);
+                });
+
+                const allData = await Promise.all(promises);
+                const flattenedData = allData.flat();
+                await formatedJSONToCSV(flattenedData, outputFile, mode);
+            }
+        }
     } catch (error) {
         console.error('Error in main execution:', error);
         process.exit(1);

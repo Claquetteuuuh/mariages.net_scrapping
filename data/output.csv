@@ -1,4 +1,5 @@
 type,name,city,region,postalCode,url,min,max
+"chateau-mariage","Château de Chavagneux","Genouilleux","Ain","01090","https://www.mariages.net/chateau-mariage/chateau-de-chavagneux--e183909",80,500
 "domaine-mariage","Domaine Bacchus","Groslée","Ain","01680","https://www.mariages.net/domaine-mariage/domaine-bacchus--e329500",20,250
 "domaine-mariage","Domaine de Divonne Hôtel 4* Golf et Casino","Divonne-les-Bains","Ain","01220","https://www.mariages.net/domaine-mariage/domaine-de-divonne-hotel-4-golf-et-casino--e19187",30,250
 "domaine-mariage","Pre-Jeantet","Valserhône","Ain","01200","https://www.mariages.net/domaine-mariage/pre-jeantet--e320450",50,200
@@ -9,17 +10,52 @@ type,name,city,region,postalCode,url,min,max
 "domaine-mariage","Domaine de la Distillerie","Polliat","Ain","01310","https://www.mariages.net/domaine-mariage/domaine-de-la-distillerie--e275861",40,185
 "domaine-mariage","Ferme du Tremblay","Saint-Trivier-de-Courtes","Ain","01560","https://www.mariages.net/domaine-mariage/ferme-du-tremblay--e29170",25,500
 "domaine-mariage","Domaine d'Amareins","Amareins Francheleins Ces","Ain","01090","https://www.mariages.net/domaine-mariage/domaine-damareins--e259550",60,700
+"chateau-mariage","Georges Blanc","Vonnas","Ain","01540","https://www.mariages.net/chateau-mariage/georges-blanc--e28244",50,280
+"chateau-mariage","Château de Saint-Bernard","Saint-Bernard","Ain","01600","https://www.mariages.net/chateau-mariage/chateau-de-saint-bernard--e178071",70,130
 "domaine-mariage","Domaine Alexander","Saint-Trivier-sur-Moignans","Ain","01990","https://www.mariages.net/domaine-mariage/domaine-alexander--e282726",50,300
 "domaine-mariage","Les Brouilles","Malafretaz","Ain","01340","https://www.mariages.net/domaine-mariage/les-brouilles--e107194",20,130
 "domaine-mariage","Domaine du Colombier","Sandrans","Ain","01400","https://www.mariages.net/domaine-mariage/domaine-du-colombier--e177095",,
 "domaine-mariage","Domaine des Batières","Marlieux","Ain","01240","https://www.mariages.net/domaine-mariage/domaine-des-batieres--e114772",50,300
 "domaine-mariage","Domaine du Petit Chambard","Ambérieux-en-Dombes","Ain","01480","https://www.mariages.net/domaine-mariage/domaine-du-petit-chambard--e123606",30,145
 "domaine-mariage","Les Maisons du Bonheur","0","Rhône","69820","https://www.mariages.net/domaine-mariage/les-maisons-du-bonheur--e128454",,
+"salle-mariage","Domaine de Marboz","Marboz","Ain","01851","https://www.mariages.net/salle-mariage/domaine-de-marboz--e332938",,
 "domaine-mariage","Château de Luponnas","Vonnas","Ain","01540","https://www.mariages.net/domaine-mariage/chateau-de-luponnas--e7341",50,250
 "domaine-mariage","Pavillon Bellevue","Belley","Ain","01300","https://www.mariages.net/domaine-mariage/pavillon-bellevue--e228442",10,100
+"chateau-mariage","Château des Creusettes","Villars-les-Dombes","Ain","01240","https://www.mariages.net/chateau-mariage/chateau-des-creusettes--e148976",30,150
 "domaine-mariage","Le Domaine du Cuiset","Saint-André-sur-Vieux-Jonc","Ain","01960","https://www.mariages.net/domaine-mariage/le-domaine-du-cuiset--e89617",80,160
 "domaine-mariage","Le Charmay","Sandrans","Ain","01400","https://www.mariages.net/domaine-mariage/le-charmay--e223345",,
+"chateau-mariage","Château de Montplaisant","Montagnat","Ain","01250","https://www.mariages.net/chateau-mariage/chateau-de-montplaisant--e20171",50,200
+"salle-mariage","Le Quai des Lanternes","Saint-Étienne-sur-Chalaronne","Ain","01140","https://www.mariages.net/salle-mariage/le-quai-des-lanternes--e160558",,
 "domaine-mariage","Domaine de Prales","Perrex","Ain","01540","https://www.mariages.net/domaine-mariage/domaine-de-prales--e312472",,
 "domaine-mariage","Domaine de Jujurieux","Jujurieux","Ain","01640","https://www.mariages.net/domaine-mariage/domaine-de-jujurieux--e169506",1,230
 "domaine-mariage","Domaine du Gouverneur - Château du Breuil","Monthieux","Ain","01390","https://www.mariages.net/domaine-mariage/domaine-du-gouverneur-chateau-du-breuil--e159500",50,350
 "domaine-mariage","Domaine du Très-Haut - Château de Montanges","Montanges","Ain","01200","https://www.mariages.net/domaine-mariage/domaine-du-tres-haut-chateau-de-montanges--e291304",2,400
+"restaurant-mariage","Maison Bastien","Reyrieux","Ain","01600","https://www.mariages.net/restaurant-mariage/maison-bastien--e260155",50,120
+"domaine-mariage","Golf de la Bresse - Le Jacques","Condeissiat","Ain","01400","https://www.mariages.net/domaine-mariage/golf-de-la-bresse-le-jacques--e261145",15,100
+"salle-mariage","Hôtel Logis Lyon Est","Saint-Maurice-de-Beynost","Ain","01700","https://www.mariages.net/salle-mariage/hotel-logis-lyon-est--e307688",70,240
+"salle-mariage","L'Annexe","Trévoux","Ain","01600","https://www.mariages.net/salle-mariage/lannexe--e315596",20,120
+"restaurant-mariage","Renaissance Rim’s","Saint-André-de-Corcy","Ain","01390","https://www.mariages.net/restaurant-mariage/renaissance-rim-s--e358119",,
+"restaurant-mariage","Antica Trattoria","Montluel","Ain","01120","https://www.mariages.net/restaurant-mariage/antica-trattoria--e119597",20,100
+"restaurant-mariage","Le Panoramique","Cerdon","Ain","01450","https://www.mariages.net/restaurant-mariage/le-panoramique--e119258",30,75
+"domaine-mariage","Domaine des Dombes","Misérieux","Ain","01600","https://www.mariages.net/domaine-mariage/domaine-des-dombes--e323020",25,120
+"domaine-mariage","Val d'Orey","Ruffieu","Ain","01260","https://www.mariages.net/domaine-mariage/val-dorey--e339130",10,50
+"restaurant-mariage","Restaurant l'Evidence","Oyonnax","Ain","01100","https://www.mariages.net/restaurant-mariage/restaurant-levidence--e297648",,
+"auberge-mariage","Auberge de la Paillère","Belley","Ain","01350","https://www.mariages.net/auberge-mariage/auberge-de-la-paillere--e209889",100,250
+"auberge-mariage","Auberge de Campagne du Mollard","Châtillon-la-Palud","Ain","01320","https://www.mariages.net/auberge-mariage/auberge-de-campagne-du-mollard--e119601",50,130
+"domaine-mariage","Domaine de la Flandrine","Dompierre-sur-Veyle","Ain","01240","https://www.mariages.net/domaine-mariage/domaine-de-la-flandrine--e321622",,
+"domaine-mariage","Moulin de Longchamp","Lent","Ain","01240","https://www.mariages.net/domaine-mariage/moulin-de-longchamp--e353997",15,40
+"restaurant-mariage","Auberge de Saint Didier","Neyron","Ain","01700","https://www.mariages.net/restaurant-mariage/auberge-de-saint-didier--e99589",35,70
+"restaurant-mariage","Le Chanel Hôtel Restaurant","Villieu-Loyes-Mollon","Ain","01800","https://www.mariages.net/restaurant-mariage/le-chanel-hotel-restaurant--e279368",10,100
+"restaurant-mariage","Les terrasses des brottaux","Blyes","Ain","01150","https://www.mariages.net/restaurant-mariage/les-terrasses-des-brottaux--e271647",40,100
+"domaine-mariage","Le Domaine du Hibou","Châtillon-sur-Chalaronne","Ain","01400","https://www.mariages.net/domaine-mariage/le-domaine-du-hibou--e253189",,
+"chateau-mariage","Domaine de Challes","Saint-Didier-sur-Chalaronne","Ain","01140","https://www.mariages.net/chateau-mariage/domaine-de-challes--e249049",,
+"domaine-mariage","Domaine Boiron","Montluel","Ain","01120","https://www.mariages.net/domaine-mariage/domaine-boiron--e200313",30,80
+"domaine-mariage","Golf Hotel Restaurant de La Sorelle","Chalamont","Ain","01320","https://www.mariages.net/domaine-mariage/golf-hotel-restaurant-de-la-sorelle--e182281",2,90
+"domaine-mariage","Le Domaine de Sainte-Croix","Sainte-Croix","Ain","01120","https://www.mariages.net/domaine-mariage/le-domaine-de-sainte-croix--e177093",60,150
+"chateau-mariage","Château de Chenavel","Jujurieux","Ain","01640","https://www.mariages.net/chateau-mariage/chateau-de-chenavel--e285122",25,200
+"domaine-mariage","Domaine des Cèdres","Villebois","Ain","01150","https://www.mariages.net/domaine-mariage/domaine-des-cedres--e7407",40,190
+"auberge-mariage","Auberge de la Ferme du Grand Ronjon","Saint-Trivier-de-Courtes","Ain","01560","https://www.mariages.net/auberge-mariage/auberge-de-la-ferme-du-grand-ronjon--e105926",,
+"restaurant-mariage","Hôtel Restaurant Chez Nous","Montluel","Ain","01120","https://www.mariages.net/restaurant-mariage/hotel-restaurant-chez-nous--e141817",20,80
+"domaine-mariage","Domaine de Fontanelle","Savigneux","Ain","01480","https://www.mariages.net/domaine-mariage/domaine-de-fontanelle--e175411",,
+"restaurant-mariage","Les Halles de St Vulbas","Saint-Vulbas","Ain","01150","https://www.mariages.net/restaurant-mariage/les-halles-de-st-vulbas--e127039",60,140
+"domaine-mariage","La Porte du Jardin","Gex","Ain","01170","https://www.mariages.net/domaine-mariage/la-porte-du-jardin--e256245",10,400
