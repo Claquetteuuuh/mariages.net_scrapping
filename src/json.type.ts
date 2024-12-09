@@ -37,4 +37,5 @@ interface CompleteDomainInfo {
     name: string;
     min: number;
     max: number;
+    type: string;
 }

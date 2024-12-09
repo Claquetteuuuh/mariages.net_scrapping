@@ -92,7 +92,8 @@ async function getInterestedInfoWithMinMax(domainInfo: DomainInfo) {
     const count = await getGuestCount(url)
     return {
         ...domainInfo,
-        ...count
+        ...count,
+        type: url.split("/")[3]
     }
 }
 
@@ -112,7 +113,7 @@ async function getCompleteDataFormatedOfPage(url: string): Promise<CompleteDomai
 }
 
 async function formatedJSONToCSV(infos: CompleteDomainInfo[], outFile: string, mode: "w" | "a") {
-    const headers = ['name', 'city', 'region', 'postalCode', 'url', 'min', 'max'];
+    const headers = ['type', 'name', 'city', 'region', 'postalCode', 'url', 'min', 'max'];
 
     const csvRows = [
         // En-têtes
@@ -120,6 +121,7 @@ async function formatedJSONToCSV(infos: CompleteDomainInfo[], outFile: string, m
         // Données
         ...infos.map(info => {
             return [
+                `"${info.type}"`,
                 `"${info.name.replace(/"/g, '""')}"`,
                 `"${info.city}"`,
                 `"${info.region}"`,

@@ -1,25 +1,25 @@
-name,city,region,postalCode,url,min,max
-"Domaine Goldenmatt","Goldbach-Altenbach","Haut Rhin","68760","https://www.mariages.net/domaine-mariage/domaine-goldenmatt--e249781",,
-"Domaine du Lac","Guebwiller","Haut Rhin","68500","https://www.mariages.net/domaine-mariage/domaine-du-lac--e112630",30,130
-"Domaine du Moulin Bas","Ligsdorf","Haut Rhin","68480","https://www.mariages.net/domaine-mariage/domaine-du-moulin-bas--e316844",50,200
-"Le Parc","Illzach","Haut Rhin","68110","https://www.mariages.net/domaine-mariage/le-parc--e173743",10,120
-"Château R – Le Petit Wetto","Wettolsheim","Haut Rhin","68920","https://www.mariages.net/domaine-mariage/chateau-r-le-petit-wetto--e14681",50,150
-"Domaine du Poney Parc","Blodelsheim","Haut Rhin","68740","https://www.mariages.net/domaine-mariage/domaine-du-poney-parc--e200935",,
-"Pavillon Royal","Habsheim","Haut Rhin","68440","https://www.mariages.net/salle-mariage/pavillon-royal--e299382",30,240
-"Domaine du Kaegy","Steinbrunn-le-Bas","Haut Rhin","68440","https://www.mariages.net/domaine-mariage/domaine-du-kaegy--e172245",,
-"Le Manoir du Schaentzel","0","Bas Rhin","67600","https://www.mariages.net/domaine-mariage/le-manoir-du-schaentzel--e186119",10,70
-"Maison Jenny","Hagenthal-le-Bas","Haut Rhin","68220","https://www.mariages.net/domaine-mariage/maison-jenny--e169656",30,200
-"La Villa des Hêtres Pourpres","Malmerspach","Haut Rhin","68550","https://www.mariages.net/domaine-mariage/la-villa-des-hetres-pourpres--e319618",15,154
-"LaLargue Golf & Wellness Resort","Mooslargue","Haut Rhin","68580","https://www.mariages.net/domaine-mariage/lalargue-golf-&-wellness-resort--e365097",20,150
-"Achillée","0","Bas Rhin","67750","https://www.mariages.net/domaine-mariage/achillee--e161204",20,140
-"Bergerie Lémalou 'Bin","Orbey","Haut Rhin","68370","https://www.mariages.net/domaine-mariage/bergerie-lemalou-bin--e109639",50,250
-"Château Lacour","Sainte-Marie-aux-Mines","Haut Rhin","68160","https://www.mariages.net/domaine-mariage/chateau-lacour--e320934",2,80
-"Le Moulin de la Mangue","0","Haute-Saône","70400","https://www.mariages.net/domaine-mariage/le-moulin-de-la-mangue--e157674",10,150
-"Centre le Chauffour","Sainte-Marie-aux-Mines","Haut Rhin","68160","https://www.mariages.net/domaine-mariage/centre-le-chauffour--e194223",40,150
-"Domaine de Chaletang","0","Territoire de Belfort","90300","https://www.mariages.net/domaine-mariage/domaine-de-chaletang--e107237",2,150
-"A la Croisée des Chemins","Ferrette","Haut Rhin","68480","https://www.mariages.net/domaine-mariage/a-la-croisee-des-chemins--e287188",,
-"Mines de Tellure","Sainte-Marie-aux-Mines","Haut Rhin","68160","https://www.mariages.net/domaine-mariage/mines-de-tellure--e210359",2,70
-"Le Moulin de la Vallée","Hausgauen","Haut Rhin","68130","https://www.mariages.net/domaine-mariage/le-moulin-de-la-vallee--e310558",,
-"Les Dominicains","Guebwiller","Haut Rhin","68500","https://www.mariages.net/domaine-mariage/les-dominicains--e255795",50,250
-"Baeselbach","Bourbach-le-Haut","Haut Rhin","68250","https://www.mariages.net/domaine-mariage/baeselbach--e142809",60,130
-"Les Jardins du Temps","Sausheim","Haut Rhin","68390","https://www.mariages.net/domaine-mariage/les-jardins-du-temps--e254279",40,600
+type,name,city,region,postalCode,url,min,max
+"domaine-mariage","Domaine Bacchus","Groslée","Ain","01680","https://www.mariages.net/domaine-mariage/domaine-bacchus--e329500",20,250
+"domaine-mariage","Domaine de Divonne Hôtel 4* Golf et Casino","Divonne-les-Bains","Ain","01220","https://www.mariages.net/domaine-mariage/domaine-de-divonne-hotel-4-golf-et-casino--e19187",30,250
+"domaine-mariage","Pre-Jeantet","Valserhône","Ain","01200","https://www.mariages.net/domaine-mariage/pre-jeantet--e320450",50,200
+"chateau-mariage","Château de Versailleux","Versailleux","Ain","01330","https://www.mariages.net/chateau-mariage/chateau-de-versailleux--e252385",70,350
+"domaine-mariage","Domaine de la Rochère","Domsure","Ain","01270","https://www.mariages.net/domaine-mariage/domaine-de-la-rochere--e7412",20,250
+"domaine-mariage","Ranch des Rochettes","Ceyzériat","Ain","01250","https://www.mariages.net/domaine-mariage/ranch-des-rochettes--e106570",50,180
+"domaine-mariage","Le Clos Talançonnais","Reyrieux","Ain","01600","https://www.mariages.net/domaine-mariage/le-clos-talanconnais--e106447",40,300
+"domaine-mariage","Domaine de la Distillerie","Polliat","Ain","01310","https://www.mariages.net/domaine-mariage/domaine-de-la-distillerie--e275861",40,185
+"domaine-mariage","Ferme du Tremblay","Saint-Trivier-de-Courtes","Ain","01560","https://www.mariages.net/domaine-mariage/ferme-du-tremblay--e29170",25,500
+"domaine-mariage","Domaine d'Amareins","Amareins Francheleins Ces","Ain","01090","https://www.mariages.net/domaine-mariage/domaine-damareins--e259550",60,700
+"domaine-mariage","Domaine Alexander","Saint-Trivier-sur-Moignans","Ain","01990","https://www.mariages.net/domaine-mariage/domaine-alexander--e282726",50,300
+"domaine-mariage","Les Brouilles","Malafretaz","Ain","01340","https://www.mariages.net/domaine-mariage/les-brouilles--e107194",20,130
+"domaine-mariage","Domaine du Colombier","Sandrans","Ain","01400","https://www.mariages.net/domaine-mariage/domaine-du-colombier--e177095",,
+"domaine-mariage","Domaine des Batières","Marlieux","Ain","01240","https://www.mariages.net/domaine-mariage/domaine-des-batieres--e114772",50,300
+"domaine-mariage","Domaine du Petit Chambard","Ambérieux-en-Dombes","Ain","01480","https://www.mariages.net/domaine-mariage/domaine-du-petit-chambard--e123606",30,145
+"domaine-mariage","Les Maisons du Bonheur","0","Rhône","69820","https://www.mariages.net/domaine-mariage/les-maisons-du-bonheur--e128454",,
+"domaine-mariage","Château de Luponnas","Vonnas","Ain","01540","https://www.mariages.net/domaine-mariage/chateau-de-luponnas--e7341",50,250
+"domaine-mariage","Pavillon Bellevue","Belley","Ain","01300","https://www.mariages.net/domaine-mariage/pavillon-bellevue--e228442",10,100
+"domaine-mariage","Le Domaine du Cuiset","Saint-André-sur-Vieux-Jonc","Ain","01960","https://www.mariages.net/domaine-mariage/le-domaine-du-cuiset--e89617",80,160
+"domaine-mariage","Le Charmay","Sandrans","Ain","01400","https://www.mariages.net/domaine-mariage/le-charmay--e223345",,
+"domaine-mariage","Domaine de Prales","Perrex","Ain","01540","https://www.mariages.net/domaine-mariage/domaine-de-prales--e312472",,
+"domaine-mariage","Domaine de Jujurieux","Jujurieux","Ain","01640","https://www.mariages.net/domaine-mariage/domaine-de-jujurieux--e169506",1,230
+"domaine-mariage","Domaine du Gouverneur - Château du Breuil","Monthieux","Ain","01390","https://www.mariages.net/domaine-mariage/domaine-du-gouverneur-chateau-du-breuil--e159500",50,350
+"domaine-mariage","Domaine du Très-Haut - Château de Montanges","Montanges","Ain","01200","https://www.mariages.net/domaine-mariage/domaine-du-tres-haut-chateau-de-montanges--e291304",2,400
