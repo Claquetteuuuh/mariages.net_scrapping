@@ -1,7 +1,7 @@
 import * as cheerio from 'cheerio';
 import axios from "axios"
-import * as fs from 'fs';
 import { writeFile, appendFile } from 'fs/promises';
+import logger from './logger';
 
 async function getHtml(url: string): Promise<string> {
     try {
@@ -13,7 +13,7 @@ async function getHtml(url: string): Promise<string> {
         }
         return "";
     } catch (error) {
-        console.error('Error fetching HTML:', error);
+        logger.error('Error fetching HTML:', error);
         return "";
     }
 }
@@ -28,7 +28,7 @@ async function getGuestCountHtml(url: string): Promise<string> {
         }
         return "";
     } catch (error) {
-        console.error('Error fetching HTML:', error);
+        logger.error('Error fetching HTML:', error);
         return "";
     }
 }
@@ -88,7 +88,7 @@ async function extractCityFromSingleObjectPage(url: string): Promise<string> {
         const json = JSON.parse(unparsedJSON)
         return json[0].address.addressLocality
     }catch(err) {
-        console.error("Cannot parse the JSON for url: ", url)
+        logger.error("Cannot parse the JSON for url: ", url)
         return null
     }
 
@@ -186,9 +186,9 @@ async function formatedJSONToCSV(infos: CompleteDomainInfo[], outFile: string, m
         if (mode == "w") {
             await writeFile(`./data/${outFile}`, csvContent, 'utf-8');
         }
-        console.log(`CSV file has been saved to: ${outFile}`);
+        logger.success(`CSV file has been saved to: ${outFile}`);
     } catch (error) {
-        console.error('Error writing CSV file:', error);
+        logger.error('Error writing CSV file:', error);
         throw error;
     }
 }
@@ -199,48 +199,78 @@ const outputFile = process.argv[4];
 const maxPage = process.argv[5];
 
 if (!url || !mode || !outputFile) {
-    console.error('Usage: npm run start <url> <mode> <outputFile>');
-    console.error('mode should be either "w" (write) or "a" (append)');
+    logger.error('Usage: npm run start <url> <mode> <outputFile>');
+    logger.error('mode should be either "w" (write) or "a" (append)');
     process.exit(1);
 }
 
 if (mode !== 'w' && mode !== 'a') {
-    console.error('Mode must be either "w" (write) or "a" (append)');
+    logger.error('Mode must be either "w" (write) or "a" (append)');
     process.exit(1);
 }
 
 const main = async () => {
     try {
+        logger.info("Lancement du script...")
+        
         if (!maxPage) {
+            logger.info("Aucun nombre de page détecté")
+            logger.info("Récupération des informations de la page...")
             const formatedData = await getCompleteDataFormatedOfPage(url);
+            if(formatedData){
+                logger.success("Information récupéré avec succès")
+                logger.info(`Nombre d'éléments trouvés: ${formatedData.length}`)
+            }
+            logger.info("Sauvegarde dans le fichier: ", outputFile)
             await formatedJSONToCSV(formatedData, outputFile, mode);
+            logger.success("Données sauvegardées avec succès")
             return
         }
+
         const maxPageInt = Number.parseInt(maxPage)
-        if (maxPage) {
-            const param = "&NumPage="
-            if (!url.includes(param)) {
-                const promises = Array.from({ length: maxPageInt }, (_, i) =>
-                    getCompleteDataFormatedOfPage(`${url}${param}${i + 1}`)
-                );
+        logger.info(`Traitement de ${maxPageInt} pages...`)
+        
+        const param = "&NumPage="
+        if (!url.includes(param)) {
+            logger.info("Génération des URLs avec paramètre de pagination...")
+            const promises = Array.from({ length: maxPageInt }, (_, i) =>
+                getCompleteDataFormatedOfPage(`${url}${param}${i + 1}`)
+            );
 
-                const allData = await Promise.all(promises);
+            logger.info("Récupération des données de toutes les pages...")
+            const allData = await Promise.all(promises);
+            logger.success("Données récupérées avec succès")
 
-                const flattenedData = allData.flat();
-                await formatedJSONToCSV(flattenedData, outputFile, mode);
-            } else {
-                const promises = Array.from({ length: maxPageInt }, (_, i) => {
-                    const newUrl = url.replace(/NumPage=\d+/, `NumPage=${i + 1}`);
-                    return getCompleteDataFormatedOfPage(newUrl);
-                });
+            const flattenedData = allData.flat();
+            logger.info(`Nombre total d'éléments trouvés: ${flattenedData.length}`)
+            
+            logger.info("Sauvegarde des données dans le fichier CSV...")
+            await formatedJSONToCSV(flattenedData, outputFile, mode);
+            logger.success("Données sauvegardées avec succès")
 
-                const allData = await Promise.all(promises);
-                const flattenedData = allData.flat();
-                await formatedJSONToCSV(flattenedData, outputFile, mode);
-            }
+        } else {
+            logger.info("Modification des URLs existantes avec nouvelle pagination...")
+            const promises = Array.from({ length: maxPageInt }, (_, i) => {
+                const newUrl = url.replace(/NumPage=\d+/, `NumPage=${i + 1}`);
+                return getCompleteDataFormatedOfPage(newUrl);
+            });
+
+            logger.info("Récupération des données de toutes les pages...")
+            const allData = await Promise.all(promises);
+            logger.success("Données récupérées avec succès")
+
+            const flattenedData = allData.flat();
+            logger.info(`Nombre total d'éléments trouvés: ${flattenedData.length}`)
+            
+            logger.info("Sauvegarde des données dans le fichier CSV...")
+            await formatedJSONToCSV(flattenedData, outputFile, mode);
+            logger.success("Données sauvegardées avec succès")
         }
+        
+        logger.success("Script terminé avec succès")
+        
     } catch (error) {
-        console.error('Error in main execution:', error);
+        logger.error('Erreur lors de l\'exécution:', error)
         process.exit(1);
     }
 };
