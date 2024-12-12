@@ -11,7 +11,7 @@ export class LoggerService {
     private logLevel: LogLevel;
 
     private constructor() {
-        this.logLevel = (process.env.LOG_LEVEL as LogLevel) || LogLevel.INFO;
+        this.logLevel = (process.env.LOG_LEVEL as LogLevel) || LogLevel.SUCCESS;
     }
 
     public static getInstance(): LoggerService {
