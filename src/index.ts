@@ -73,6 +73,28 @@ function extractSecondLastJsonScript(html: string): string {
     return '';
 }
 
+async function getSecondLastJsonScriptFromUrl(url: string): Promise<string> {
+    const html = await getHtml(url)
+    if(!html){
+        return null
+    }
+    const secondLastJsonScript = extractSecondLastJsonScript(html)
+    return secondLastJsonScript
+}
+
+async function extractCityFromSingleObjectPage(url: string): Promise<string> {
+    const unparsedJSON = await getSecondLastJsonScriptFromUrl(url)
+    try {
+        const json = JSON.parse(unparsedJSON)
+        return json[0].address.addressLocality
+    }catch(err) {
+        console.error("Cannot parse the JSON for url: ", url)
+        return null
+    }
+
+}
+
+
 function parseDomains(jsonString: string): Domain[] {
     const domains: Domain[] = JSON.parse(jsonString);
 
@@ -87,7 +109,19 @@ function parseDomains(jsonString: string): Domain[] {
     }));
 }
 
-function getInterestedInfo(domain: Domain): DomainInfo {
+async function getInterestedInfo(domain: Domain): Promise<DomainInfo> {
+    if(!domain.address.addressLocality || domain.address.addressLocality == "0"){
+        const city = await extractCityFromSingleObjectPage(domain.url)
+        if(city){
+            return {
+                city: city,
+                region: domain.address.addressRegion,
+                postalCode: domain.address.postalCode,
+                url: domain.url,
+                name: domain.name
+            };        
+        }    
+    }
     return {
         city: domain.address.addressLocality,
         region: domain.address.addressRegion,
@@ -113,8 +147,8 @@ async function getCompleteDataFormatedOfPage(url: string): Promise<CompleteDomai
     const parsedDomains = parseDomains(interestedJSON);
 
     const completeInterestedInfos = await Promise.all(
-        parsedDomains.map(domain => {
-            const interestedInfo = getInterestedInfo(domain);
+        parsedDomains.map(async domain => { 
+            const interestedInfo = await getInterestedInfo(domain); 
             return getInterestedInfoWithMinMax(interestedInfo);
         })
     );
