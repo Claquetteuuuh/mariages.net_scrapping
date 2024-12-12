@@ -36,14 +36,24 @@ async function getGuestCountHtml(url: string): Promise<string> {
 function extractGuestCount(html: string) {
     const $ = cheerio.load(html);
     const guestText = $('.storefrontHeadingFaqsCard__label').text().trim();
-
-    const match = guestText.match(/(\d+)\s*-\s*(\d+)/);
-    if (!match) return null;
-
-    return {
-        min: parseInt(match[1]),
-        max: parseInt(match[2])
-    };
+    
+    const rangeMatch = guestText.match(/(\d+)\s*-\s*(\d+)/);
+    if (rangeMatch) {
+        return {
+            min: parseInt(rangeMatch[1]),
+            max: parseInt(rangeMatch[2])
+        };
+    }
+    
+    const upToMatch = guestText.match(/Jusqu'à\s*(\d+)/);
+    if (upToMatch) {
+        return {
+            min: 0,
+            max: parseInt(upToMatch[1])
+        };
+    }
+    
+    return null;
 }
 
 async function getGuestCount(url: string): Promise<{ min: number, max: number }> {
